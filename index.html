@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>Edukemy</title>
+    <style>
+      :root {
+        --primary: #068bf0;
+        --dark: #203155;
+        --light: #fafafa;
+        --default: #f4f5fa;
+      }
+      .bg-primary {
+        background-color: var(--primary) !important;
+      }
+      .text-primary {
+        color: var(--primary) !important;
+      }
+      .text-dark {
+        color: var(--dark) !important;
+      }
+      .bg-light {
+        background-color: var(--light);
+      }
+      .bg-default {
+        background-color: var(--default);
+      }
+      .border-primary {
+        border-color: var(--primary) !important;
+      }
+      .btn-outline-primary {
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-outline-primary:hover,
+      .btn-outline-primary:active {
+        background-color: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-primary {
+        background-color: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-primary:hover,
+      .btn-primary:active {
+        background-color: var(--dark);
+        border-color: var(--dark);
+      }
+      .bg-dark {
+        background-color: var(--dark) !important;
+      }
+      .btn-dark {
+        background-color: var(--dark);
+        border-color: var(--dark);
+      }
+      .btn-dark:hover,
+      .btn-dark:active {
+        background-color: var(--dark);
+        border-color: var(--dark);
+      }
+      .btn-light {
+        color: var(--dark) !important;
+      }
+      .btn-light:hover,
+      .btn-light:active {
+        color: var(--primary) !important;
+      }
+      .row {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 100%;
+      }
+      textarea {
+        resize: none;
+      }
+      body {
+        transition: all 0.4s ease 0s;
+      }
+      .nav-link {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #757575;
+      }
+      .nav-link.active {
+        color: var(--primary) !important;
+      }
+      .footer-links li {
+        padding-bottom: 10px;
+      }
+      .footer-links li a {
+        font-size: 18px;
+        color: #000 !important;
+      }
+      .footer-links li a:hover,
+      .footer-links li a:active {
+        color: var(--primary) !important;
+      }
+      .fa {
+        color: inherit;
+      }
+      @media (max-width: 768px) {
+        .mask-group {
+          object-position: unset !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="container-fluid px-0 text-dark mx-auto position-relative">
+    <header class="">
+      <div
+        class="px-5 py-2 bg-dark row gy-3 align-items-center justify-content-between"
+      >
+        <div class="col-md-6 d-flex">
+          <button
+            class="btn bg-light text-primary rounded-pill text-uppercase me-3"
+          >
+            Enquire Now
+          </button>
+          <div class="col">
+            <div class="input-group rounded-pill overflow-hidden">
+              <input
+                class="form-control"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="basic-addon2"
+              />
+              <span
+                class="input-group-text text-white"
+                style="background: #757575; border-color: #757575"
+                id="basic-addon2"
+              >
+                <i class="fa fa-search"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-auto">
+          <div class="row row-cols-2">
+            <div class="col text-white">
+              <i class="fa fa-shopping-cart" style="font-size: 35px"></i>
+              <span
+                class="badge px-2 py-0 bg-light text-dark rounded-pill"
+                style="top: -22px; left: -4px; position: relative"
+                ><small>0</small></span
+              >
+            </div>
+            <div class="col">
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn btn-light dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Hello, Sign In
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sign In</a></li>
+                  <li><a class="dropdown-item" href="#">Sign Up</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-auto">
+          <div class="row row-cols-4">
+            <div class="col">
+              <button
+                class="btn btn-light rounded-circle p-0 d-flex align-items-center justify-content-center"
+                style="height: 30px; width: 30px"
+              >
+                <i class="fa fa-facebook"></i>
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-light rounded-circle p-0 d-flex align-items-center justify-content-center"
+                style="height: 30px; width: 30px"
+              >
+                <i class="fa fa-telegram"></i>
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-light rounded-circle p-0 d-flex align-items-center justify-content-center"
+                style="height: 30px; width: 30px"
+              >
+                <i class="fa fa-youtube"></i>
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-light rounded-circle p-0 d-flex align-items-center justify-content-center"
+                style="height: 30px; width: 30px"
+              >
+                <i class="fa fa-instagram"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-flex flex-column flex-lg-row align-items-center p-1 px-lg-4 bg-white border-bottom shadow-sm"
+      >
+        <nav class="navbar navbar-expand-lg w-100 navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/"
+              ><img src="assets/logo.png" style="height: 40px"
+            /></a>
+            <button id="menu-toggle" class="navbar-toggler" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end">
+              <ul
+                class="navbar-nav mb-2 mb-lg-0 col-lg-8 align-items-center justify-content-around"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Courses
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Courses</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Events
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Events</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Our Success Story</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="" style="">
+      <!-- cover section -->
+      <section
+        style="
+          background-image: url(assets/top-banner.png);
+          height: 350px;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          cursor: pointer;
+        "
+      ></section>
+      <!-- feature section -->
+      <section class="px-5 row bg-default">
+        <div
+          class="card card-body shadow col-11 mx-auto position-relative"
+          style="flex: 0 0 auto; top: -10px"
+        >
+          <div class="row gy-3">
+            <div
+              class="col-12 col-md p-2"
+              style="border-right: 1px solid #8d8d8d"
+            >
+              <div class="row align-items-center h-100">
+                <div class="col-auto">
+                  <img
+                    src="assets/Best Quality Test.png"
+                    style="height: 60px"
+                  />
+                </div>
+                <div class="col">
+                  Best Quality Test Papers, Closest To Upsc CSE
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md p-2"
+              style="border-right: 1px solid #8d8d8d"
+            >
+              <div class="row align-items-center h-100">
+                <div class="col-auto">
+                  <img
+                    src="assets/Holistic Thematic.png"
+                    style="height: 60px"
+                  />
+                </div>
+                <div class="col">
+                  Holistic Thematic Covergae Only In 12 Gs Tests
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md p-2"
+              style="border-right: 1px solid #8d8d8d"
+            >
+              <div class="row align-items-center h-100">
+                <div class="col-auto">
+                  <img src="assets/Live Post Test.png" style="height: 60px" />
+                </div>
+                <div class="col">Live Post Test Discussion By Expert Panel</div>
+              </div>
+            </div>
+            <div class="col-12 col-md p-2">
+              <div class="row align-items-center h-100">
+                <div class="col-auto">
+                  <img src="assets/5 Bonus.png" style="height: 60px" />
+                </div>
+                <div class="col">5 Bonus Csat Tests</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about section -->
+      <section class="p-5 bg-default">
+        <h2 class="row row-cols-2 gx-2 justify-content-center">
+          <div class="col-auto">About</div>
+          <div class="col-auto" style="font-weight: 900; z-index: 0">
+            Top Gear
+            <div
+              class="position-relative bg-primary"
+              style="height: 1rem; top: -0.8rem; z-index: -1"
+            ></div>
+          </div>
+        </h2>
+        <div class="row gy-3 gx-5 align-items-end justify-content-around">
+          <div class="col-12 col-md-5 col-lg-4">
+            <div class="card shadow">
+              <div>
+                <img src="assets/about top gear.png" class="w-100" />
+              </div>
+              <div class="card-body pt-0">
+                <div class="d-flex justify-content-between">
+                  <h4 class="fw-bold">₹1499</h4>
+                  <div>
+                    <img src="assets/calendar.svg" height="24px" />
+                    <small class="text-primary">27th February 2021</small>
+                  </div>
+                </div>
+                <button class="btn btn-primary w-100 mt-3 fw-bold">
+                  Add to Cart
+                </button>
+                <button class="btn btn-dark w-100 mt-3 fw-bold">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md col-lg-7">
+            <h3 class="fw-bold">What Is Top Gear?</h3>
+            <p>
+              1. Prelims 2021 Test Series Offers You 12 GS Tests And 5 CSAT
+              Tests: 6 GS Sectional Tests, 6 GS Full Length Tests & 5 CSAT Tests
+            </p>
+            <p>
+              2. Holistic Thematic Coverage. Take Sectional Tests First Followed
+              By Full-Length Test for Comprehensive Approach.
+            </p>
+            <p>
+              3. Live Post Test Discussion By Prevous Years' Toppers And
+              Experienced Faculty. Doubt Resolution In Real Time.
+            </p>
+            <p>4. All India Test Rank Provided</p>
+            <h3 class="fw-bold">Why Top Gear?</h3>
+            <p>
+              1. Best In Industry Quality Test Paper, Closest To UPSC CSE
+              Designed By Expert Panel Having Cumulative 70+ Years Experience In
+              The Field.
+            </p>
+            <p>
+              2. Questions Decoded In Live Test Discussion, Scienticfic Method
+              To Approach The Paper Would Be Taught.
+            </p>
+            <p>
+              3. Master Tricks To Solving Mcqs (Elimination Technique,
+              Understanding Rationale/Logic Behind Question)
+            </p>
+            <p>
+              4. Top Gear Prepares You To Tackle Unpredictability Of The UPSC
+              Prelims Exam
+            </p>
+          </div>
+        </div>
+        <br />
+      </section>
+      <!-- highlights section -->
+      <section class="pt-4">
+        <h2 class="row row-cols-2 gx-2 justify-content-center">
+          <div class="col-auto">Key</div>
+          <div class="col-auto" style="font-weight: 900; z-index: 0">
+            Highlights
+            <div
+              class="position-relative bg-primary"
+              style="height: 1rem; top: -0.8rem; z-index: -1"
+            ></div>
+          </div>
+        </h2>
+        <div class="p-5 pb-0 row position-relative">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="row gy-3 align-items-end">
+              <div
+                class="order-md-0 order-lg-0 col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-around mb-4"
+              >
+                <div><img src="assets/2.png" class="w-100 my-3" /></div>
+                <div><img src="assets/6.png" class="w-100 my-3" /></div>
+                <div><img src="assets/7.png" class="w-100 my-3" /></div>
+                <div><img src="assets/8.png" class="w-100 mt-3 mb-4" /></div>
+              </div>
+              <div class="order-md-2 order-lg-1 col-12 col-lg-4 text-center">
+                <img
+                  src="assets/key highlighs image.png"
+                  style="max-height: 450px"
+                />
+              </div>
+              <div
+                class="order-md-1 order-lg-2 col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-around mb-4"
+              >
+                <div><img src="assets/1.png" class="w-100 my-3" /></div>
+                <div><img src="assets/3.png" class="w-100 my-3" /></div>
+                <div><img src="assets/4.png" class="w-100 my-3" /></div>
+                <div><img src="assets/5.png" class="w-100 mt-3 mb-4" /></div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="assets/bg lines.png"
+            class="position-absolute w-100 h-100 p-0"
+            style="object-fit: cover; z-index: -1; top: 0; left: 0"
+          />
+        </div>
+      </section>
+      <!-- download section -->
+      <section
+        class="position-relative p-5 d-flex flex-column align-items-center justify-content-center"
+      >
+        <br />
+        <h2 class="fw-bold">Download Details & Timetable For Top Gear</h2>
+        <br />
+        <button class="btn btn-primary px-4">Download Now</button>
+        <br />
+        <img
+          src="assets/Mask Group 24.png"
+          class="position-absolute w-100 h-100 p-0 mask-group"
+          style="
+            top: 0;
+            object-fit: cover;
+            object-position: 0 -130px;
+            z-index: -1;
+            background: #f4f5fa;
+          "
+        />
+      </section>
+      <!-- newsletter section -->
+      <section
+        class="position-relative mb-3 py-4 px-5 row gy-3 align-items-center justify-content-between"
+      >
+        <div class="col-12 col-lg-auto text-white text-uppercase">
+          <h3 class="m-0">Subscribe For Newsletters</h3>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="row gx-2">
+            <div class="col">
+              <input
+                type="email"
+                class="form-control"
+                style="
+                  font-size: 14px;
+                  border-radius: 15px;
+                  border-color: rgb(153, 153, 153) !important;
+                  color: #999;
+                  height: 40px;
+                "
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="col-auto">
+              <button
+                class="btn btn-light text-uppercase"
+                style="border-radius: 15px"
+              >
+                Subscribe Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <img
+          src="assets/Ed_MainBanner2.png"
+          class="position-absolute w-100 h-100 p-0"
+          style="
+            object-fit: cover;
+            left: 0;
+            z-index: -1;
+            filter: brightness(0.2);
+          "
+        />
+      </section>
+    </main>
+    <footer class="">
+      <section class="row gy-3 py-3 px-5 position-relative">
+        <div class="col-12 col-md">
+          <img src="assets/logo.png" style="height: 60px" />
+        </div>
+        <div class="col-12 col-md">
+          <ul class="list-unstyled text-small footer-links">
+            <li>
+              <a class="text-reset text-decoration-none" href="#">About Us</a>
+            </li>
+            <li>
+              <a class="text-reset text-decoration-none" href="#"
+                >News And Media</a
+              >
+            </li>
+            <li>
+              <a class="text-reset text-decoration-none" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md">
+          <ul class="list-unstyled text-small footer-links">
+            <li>
+              <a class="text-reset text-decoration-none" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a class="text-reset text-decoration-none" href="#"
+                >Cookie Policy</a
+              >
+            </li>
+            <li>
+              <a class="text-reset text-decoration-none" href="#">FAQs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md">
+          <ul class="list-unstyled text-small footer-links">
+            <li>
+              <a class="text-reset text-decoration-none" href="#"
+                >Terms & Conditions</a
+              >
+            </li>
+            <li>
+              <a class="text-reset text-decoration-none" href="#"
+                >Cancellation</a
+              >
+            </li>
+            <li>
+              <a class="text-reset text-decoration-none" href="#"
+                >Refund Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        class="row align-items-center py-3 px-5"
+        style="background-color: var(--dark)"
+      >
+        <small class="col text-center text-white">
+          &copy; 2020 Edukemy. All Right Reserved
+        </small>
+      </section>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
